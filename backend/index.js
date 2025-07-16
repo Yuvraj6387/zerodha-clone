@@ -211,7 +211,7 @@ app.get("/dashboard", (req, res) => {
 });
 
 app.post("/newOrder", async (req, res) => {
-  console.log("received" , req.body)
+ 
   let newOrder = new OrdersModel({
     name: req.body.name,
     qty: req.body.qty,

@@ -12,6 +12,19 @@ import WatchList from "./WatchList";
 import { GeneralContextProvider } from "./GeneralContext";
 
 const Dashboard = () => {
+  const [dashboardData, setDashboardData] = useState(null);
+
+  useEffect(() => {
+    axios
+      .get("https://zerodha-clone-13.onrender.com/dashboard")
+      .then((res) => {
+        console.log("Backend response:", res.data);
+        setDashboardData(res.data);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch dashboard data", err);
+      });
+  }, []);
   return (
     <div className="dashboard-container">
       <GeneralContextProvider>
