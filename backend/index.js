@@ -201,14 +201,7 @@ app.get("/allPositions", async (req, res) => {
   res.json(allPositions);
 });
 
-app.get("/dashboard", (req, res) => {
-  res.json({
-    balance: 10000,
-    holdings: [],
-    orders: [],
-    message: "Dashboard data ✅"
-  });
-});
+
 
 app.post("/newOrder", async (req, res) => {
  
