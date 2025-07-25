@@ -7,6 +7,8 @@ import GeneralContext from "./GeneralContext";
 
 import "./BuyActionWindow.css";
 
+const BAKEND_URL = process.env.REACT_APP_BACKEND_URL;
+
 const BuyActionWindow = ({ uid }) => {
   const [stockQuantity, setStockQuantity] = useState(1);
   const [stockPrice, setStockPrice] = useState(0.0);

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { VerticalGraph } from "./VerticalGraph";
+const BAKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 // import { holdings } from "../data/data";
 

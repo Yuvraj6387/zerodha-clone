@@ -1,1 +1,0 @@
-export const BAKEND_URL = "https://zerodha-clone-13.onrender.com";
