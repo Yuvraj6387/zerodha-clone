@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios, { all } from "axios";
 import { VerticalGraph } from "./VerticalGraph";
-const BAKEND_URL = process.env.REACT_APP_BACKEND_URL;
 
 // import { holdings } from "../data/data";
 
@@ -9,7 +8,7 @@ const Holdings = () => {
   const [allHoldings, setAllHoldings] = useState([]);
 
   useEffect(() => {
-    axios.get(`${BAKEND_URL}/allHoldings`).then((res) => {
+    axios.get("https://zerodha-clone-13.onrender.com/allHoldings").then((res) => {
       // console.log(res.data);
       setAllHoldings(res.data);
     });
